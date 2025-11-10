@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
-  Mail, Linkedin, Phone, Github, Award, Briefcase, GraduationCap, 
-  Code, ChevronDown, Menu, X, ExternalLink, Download, Moon, Sun,
+  Mail, Linkedin, Phone, Github, Award, GraduationCap, 
+  Code, Menu, X, ExternalLink, Download, Moon, Sun,
   ArrowUp, Send, MapPin, Calendar, TrendingUp, Users, Zap, CheckCircle, AlertCircle
 } from 'lucide-react';
 
@@ -78,7 +78,7 @@ export default function AdvancedPortfolio() {
     }, isDeleting ? 50 : 100);
 
     return () => clearTimeout(timeout);
-  }, [typedText, isDeleting, currentRoleIndex]);
+  }, [typedText, isDeleting, currentRoleIndex, roles]);
 
   // Intersection Observer for fade-in animations
   useEffect(() => {
