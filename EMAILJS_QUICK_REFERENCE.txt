@@ -1,0 +1,97 @@
+╔═══════════════════════════════════════════════════════════════╗
+║              EMAILJS QUICK SETUP REFERENCE                    ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📋 SETUP CHECKLIST:
+
+□ 1. Create EmailJS account at https://www.emailjs.com
+□ 2. Add email service (Gmail recommended)
+□ 3. Create email template
+□ 4. Copy Service ID, Template ID, and Public Key
+□ 5. Update credentials in advanced-portfolio.jsx
+□ 6. Test the contact form
+
+═══════════════════════════════════════════════════════════════
+
+🔑 YOUR CREDENTIALS (Fill this out):
+
+Service ID:     _________________________________
+Template ID:    _________________________________
+Public Key:     _________________________________
+
+═══════════════════════════════════════════════════════════════
+
+📝 CODE TO UPDATE:
+
+Find this in advanced-portfolio.jsx (around line 24):
+
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+
+Replace with:
+
+const EMAILJS_SERVICE_ID = 'service_xxxxx';    // From EmailJS dashboard
+const EMAILJS_TEMPLATE_ID = 'template_xxxxx';  // From EmailJS dashboard
+const EMAILJS_PUBLIC_KEY = 'xxxxxxxxxxxxxx';   // From EmailJS dashboard
+
+═══════════════════════════════════════════════════════════════
+
+📧 RECOMMENDED EMAIL TEMPLATE:
+
+Subject: New Message from {{from_name}} - Portfolio Contact
+
+Body:
+────────────────────────────────────────────────
+You have a new message from your portfolio!
+
+From: {{from_name}}
+Email: {{from_email}}
+
+Message:
+{{message}}
+────────────────────────────────────────────────
+
+═══════════════════════════════════════════════════════════════
+
+✅ TESTING:
+
+1. Fill out contact form on your portfolio
+2. Click "Send Message"
+3. Check for success message ✓
+4. Check your email inbox
+5. Verify email received
+
+═══════════════════════════════════════════════════════════════
+
+⚡ FREE TIER LIMITS:
+
+• 200 emails per month
+• 2 email services
+• 1 email template
+• Basic support
+
+Upgrade for more: https://www.emailjs.com/pricing
+
+═══════════════════════════════════════════════════════════════
+
+🆘 TROUBLESHOOTING:
+
+Problem: Email not sending
+→ Double-check all 3 IDs are correct
+→ Verify email service is connected
+→ Check browser console for errors
+
+Problem: Emails go to spam
+→ Use a custom domain email
+→ Configure SPF/DKIM in EmailJS
+
+═══════════════════════════════════════════════════════════════
+
+📚 RESOURCES:
+
+EmailJS Dashboard:  https://dashboard.emailjs.com/
+Documentation:      https://www.emailjs.com/docs/
+Support:            https://www.emailjs.com/support/
+
+═══════════════════════════════════════════════════════════════
