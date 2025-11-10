@@ -19,13 +19,18 @@ export default function AdvancedPortfolio() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
   
-  const roles = ['Software Engineer', 'Full Stack Developer', 'Problem Solver', 'Tech Innovator'];
+  const roles = [
+    'Software Engineer', 
+    'LLM & AI/ML Integration Specialist', 
+    'System Integration Specialist', 
+    'Experienced in Android, WearOS development'
+  ];
   const observerRef = useRef(null);
 
   // EmailJS Configuration
   const EMAILJS_SERVICE_ID = 'service_gu7350o'; // Your EmailJS Service ID
-  const EMAILJS_TEMPLATE_ID = 'template_em3arie'; // Replace with your template ID from EmailJS dashboard
-  const EMAILJS_PUBLIC_KEY = 'Q-1RpPfw32HBwQepd'; // Replace with your public key from EmailJS dashboard
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your template ID from EmailJS dashboard
+  const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Replace with your public key from EmailJS dashboard
 
   // Scroll handler
   useEffect(() => {
@@ -237,7 +242,7 @@ export default function AdvancedPortfolio() {
   const stats = [
     { icon: <TrendingUp className="w-8 h-8" />, value: '$94M+', label: 'Revenue Impact' },
     { icon: <Users className="w-8 h-8" />, value: '6M+', label: 'Users Served' },
-    { icon: <Zap className="w-8 h-8" />, value: '4+', label: 'Years Experience' },
+    { icon: <Zap className="w-8 h-8" />, value: '7+', label: 'Years Experience' },
     { icon: <Code className="w-8 h-8" />, value: '15+', label: 'Technologies' }
   ];
 
@@ -403,6 +408,14 @@ export default function AdvancedPortfolio() {
                   {item}
                 </button>
               ))}
+              <a
+                href="/Shiridi_Sai_Prasad_Resume.pdf"
+                download="Shiridi_Sai_Prasad_Resume.pdf"
+                className="px-4 py-2 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2"
+              >
+                <Download className="w-4 h-4" />
+                Resume
+              </a>
               <button
                 onClick={() => setDarkMode(!darkMode)}
                 className={`p-2 rounded-lg ${textClass} hover:bg-blue-100 transition-colors`}
@@ -466,11 +479,19 @@ export default function AdvancedPortfolio() {
                   Get In Touch
                   <Send className="w-4 h-4" />
                 </button>
+                <a
+                  href="/Shiridi_Sai_Prasad_Resume.pdf"
+                  download="Shiridi_Sai_Prasad_Resume.pdf"
+                  className="px-8 py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2"
+                >
+                  <Download className="w-4 h-4" />
+                  Download Resume
+                </a>
                 <button
-                  onClick={() => scrollToSection('projects')}
+                  onClick={() => scrollToSection('experience')}
                   className={`px-8 py-3 ${cardBgClass} ${textClass} rounded-lg font-semibold hover:shadow-lg transition-all border-2 border-blue-600`}
                 >
-                  View Projects
+                  View My Experience
                 </button>
               </div>
               <div className="flex gap-6 mt-8">
